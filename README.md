@@ -1,4 +1,4 @@
 # JavertXML
 An XML schema for exchanging governance, risk, and compliance data
 ===
-![logo](./javert.png)
+<img src="./javert.png" alt="logo" width="200"/>
