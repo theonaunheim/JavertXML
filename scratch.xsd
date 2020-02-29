@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Author: Theo Naunheim
+    Copyright: Copyright 2020, Theo Naunheim
+    License: MIT
+
+    ALL
+    <policy>
+    <standard>
+    <control>
+    
+    MANDATES
+    <law>
+    <regulation>
+    <guideline>
+
+    Units
+    <assessment>
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:jav="https://github.com/theonaunheim/javertxml/releases/tag/v.0.1.1">
+
+
+
+</xs:schema>

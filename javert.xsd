@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+citation
+    name
+    identifier=str
+    link=uri
+    effective_date
+    current_as_of_date
+    depth float
+
+associations
+
+external_mandate:
+    mandate_type=(law|regulation|guideline)
+    source=str
+    base_citation=str
+    link
+    content
+        level=(1|2|3|4|5),
+        pinpoint_citation=str
+        text
+        link
+
+
+policy:
+    content
+        section
+            citation
+            text
+            external_mandates
+                law
+                regulation
+                guideline
+            standard
+                *
+        subsection
+        subsubsection
+        subsubsubsection
+
+standard:
+control:
+procedure:
+company:
+person:
+group:
+law:
+regulation:
+guideline:
+assessment:
+finding:
+item:
+evidence:
+
+
+
+all_have:
+    guid
+    designation
+    link
+    file
+    updated date
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            This is the schema for JavertXML, which is intended to be used for
+            the exchange and storage of governance, risk, and compliance data.
+        </xs:documentation>
+        <xs:appinfo>
+            <author>
+                Theo Naunheim
+            </author>
+            <copyright>
+                Copyright 2020, Theo Naunheim
+            </copyright>
+            <license uri="https://opensource.org/licenses/MIT">
+                MIT License
+            </license>
+        <xs:appinfo>
+    <xs:annotation>
+</xs:schema>
