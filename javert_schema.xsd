@@ -104,7 +104,7 @@ file?
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="description">
+            <xs:element name="description" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">       
                         <xs:maxLength value="10000" />
@@ -160,14 +160,32 @@ file?
             <xs:complexContent>
                 <xs:extension base="base_type">
                     <xs:sequence>
+                        <xs:element name="effective_date" type="xs:date" minOccurs="0" />
+                        <xs:element name="current_as_of_date" type="xs:date" minOccurs="0" />
+                        <xs:element name="link" type="xs:anyURI" minOccurs="0"/>
                         <xs:element name="kind">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
-                                    <xs:enumeration value="law"/>
-                                    <xs:enumeration value="regulation"/>
-                                    <xs:enumeration value="guideline"/>
+                                    <xs:enumeration value="law" />
+                                    <xs:enumeration value="regulation" />
+                                    <xs:enumeration value="guideline" />
+                                    <xs:enumeration value="other" />
                                 </xs:restriction>
                             </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="citation">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="100" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="contents" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element ref="external_mandate_content" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
                         </xs:element>
                     </xs:sequence>
                 </xs:extension>
@@ -175,11 +193,27 @@ file?
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="external_mandate_content">
+        <xs:annotation>
+            <xs:documentation>
+                Extends javert_base.
+                
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="base_type">
+                    <xs:sequence>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+
 <!--
 
-    name
-    citation
-    description
+
     link
     effective_date
     current_as_of_date
